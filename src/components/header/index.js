@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 import { HeaderWrapper, NavMenu, NavLink, CartIcon, CartIconCounter } from '../../ui/components/header/index.jsx'
-
+import MiniFavorite from './miniFavorite'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-
-
 import { user } from '../../actions/user'
 
 const mapStateToProps = ({ user }) => ({
 	userSettings: user.userSettings,
 	isShow: user.isShow,
-	userCounter: user.userCounter
+	userFavorite: user.userFavorite
 })
 
 const mapDispachToProps = dispatch => bindActionCreators({
@@ -26,7 +24,7 @@ class Header extends Component {
 		console.log(event)
 	}
     render() {
-			const { isShow, userCounter } = this.props
+			const { isShow, userFavorite } = this.props
         return (
             <HeaderWrapper>
                 <NavMenu>
@@ -37,9 +35,8 @@ class Header extends Component {
                 </NavMenu>
 								{isShow &&
 								<div>
-									yes we show isShow
 								</div>}
-                <CartIcon style={{ marginLeft: 'auto', marginRight: '5%' }}><CartIconCounter style={{ top: 0, right: 0 }}>{userCounter}</CartIconCounter></CartIcon>
+								<MiniFavorite />
             </HeaderWrapper>
         )
     }

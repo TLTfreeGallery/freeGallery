@@ -71,3 +71,38 @@ export const CartIconCounter = styled.div`
         color: #2ecc71;
     }
 `
+
+export const MiniFavoriteList = styled.ul`
+  position: absolute;
+  width: calc(150px - 20px);
+  min-height: 30px;
+  left: -105px;
+  bottom: -80px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #2ecc71;
+  background: rgba(255, 255, 255, 1);
+  z-index: 10;
+`
+
+export const MiniFavoriteItems = styled.li`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+`
+export const MiniFavoritePreview = styled.div`
+  width: 60px;
+  height: 50px;
+  background-image: url(${props => props.img ? props.img : './images/default/default.png' });
+  background-size: contain;
+  background-repeat: no-repeat;
+
+`
+export const MiniFavoriteName = styled.div`
+  text-transform: uppercase;
+  text-align: center;
+`

@@ -15,31 +15,31 @@ const mapStateToProps = ({ user }) => ({
 })
 
 const mapDispachToProps = dispatch => bindActionCreators({
-	addToCard: user.addToCard,
+	addToFavorite: user.addToFavorite,
 }, dispatch)
 
 class App extends Component {
-  addToFavorite = () => {
-    this.props.addToCard()
+  addToFavorite = (data) => {
+    this.props.addToFavorite(data)
   }
   render() {
-    var image = [{name: 'images1', src: './images/standart-img.jpg'},
-    {name: 'images2', src: './jcnjs/.'},
-    {name: 'images3', src: './images/standart-img.jpg'},
-    {name: 'images4', src: ''},
-    {name: 'images1', },];
+    var image = [{name: 'images1', src: './images/standart-img.jpg', id: 0},
+    {name: 'images2', src: './jcnjs/.', id: 1},
+    {name: 'images3', src: './images/standart-img.jpg', id: 2},
+    {name: 'images4', src: '', id: 3},
+    {name: 'images1', id: 4},];
     return (
       <Wrapper>
           <Header />
           <Category />
           <Row>
           {image.map(key => (
-            <ImgWrapper>
+            <ImgWrapper key={key.id}>
               <Picture image={key.src} />
               <ImgInform>
                 <ImgName>{key.name}</ImgName>
                 <ImgNavigations>
-                  <AddToFavorite onClick={() => this.addToFavorite()} />
+                  <AddToFavorite onClick={() => this.addToFavorite(key)} />
                 </ImgNavigations>
               </ImgInform>
             </ImgWrapper>

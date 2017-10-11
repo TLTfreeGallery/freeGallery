@@ -8,6 +8,8 @@ export const { user } = createActions({
     },
     SET_SETTINGS: payload => payload,
     SHOW_INFORM: payload => payload,
-    ADD_TO_CARD: payload => payload
+    ADD_TO_FAVORITE: payload => payload,
+    HIDE_FAVORITE_LIST: payload => payload,
+    SHOW_FAVORITE_LIST: payload => payload,
   }
 })

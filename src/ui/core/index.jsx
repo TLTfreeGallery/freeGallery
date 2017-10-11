@@ -63,4 +63,5 @@ export const AddToFavorite = styled.div`
   height: 35px;
   background: url(./images/default/addToFavorite.svg);
   background-size: cover;
+  cursor: pointer;
 `
