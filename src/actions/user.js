@@ -6,6 +6,8 @@ export const { user } = createActions({
     PROFILE: {
       REQUEST
     },
-    SET_SETTINGS: payload => payload
+    SET_SETTINGS: payload => payload,
+    SHOW_INFORM: payload => payload,
+    ADD_TO_CARD: payload => payload
   }
 })

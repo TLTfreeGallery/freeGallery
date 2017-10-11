@@ -16,14 +16,51 @@ export const Row = styled.div`
 `
 
 export const ImgWrapper = styled.div`
-    width: 30vw;
-    height: 18vw;
+    position: relative;
     border: 2px solid #FD5B03;
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
-    cursor: pointer;
-    background-image: url(${props => props.image ? props.image : './images/standart-img.jpg'});
-    background-size: cover;
+`
+export const Picture = styled.div`
+  width: 30vw;
+  height: 18vw;
+  cursor: pointer;
+  background-size: cover;
+  background-image: url(${props => props.image ? props.image : './images/default/default.png'});
+  &:hover {
+     filter: blur(2px);
+  }
+`
+
+export const ImgInform = styled.div`
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-directions: row;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 30px);
+  left: 0;
+  bottom: 0;
+  height: 15%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: rgba(189,195,199,0.5)
+`
+export const ImgNavigations = styled.div`
+  flex-grow: 1;
+`
+
+export const ImgName = styled.div`
+  flex-grow: 1;
+  text-transform: uppercase;
+`
+
+export const AddToFavorite = styled.div`
+  width: 35px;
+  height: 35px;
+  background: url(./images/default/addToFavorite.svg);
+  background-size: cover;
 `

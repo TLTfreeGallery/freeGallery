@@ -1,6 +1,7 @@
 export default {
 	user: {
-    userSettings: []
-  }
-
+    userSettings: [],
+		isShow: false,
+		userCounter: 0
+  },
 }
