@@ -1,9 +1,9 @@
 export default {
 	user: {
-    userSettings: [],
+		isLogin: false,
+    userSettings: {},
 		Favorite: [],
 		isShow: false,
-		userCounter: 0,
 		isShowMiniFavorite: false,
   },
 }

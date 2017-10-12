@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { HeaderWrapper, NavMenu, NavLink, CartIcon, CartIconCounter } from '../../ui/components/header/index.jsx'
 import MiniFavorite from './miniFavorite'
+import AuthBlock from './authBlock'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { user } from '../../actions/user'
@@ -37,6 +38,7 @@ class Header extends Component {
 								<div>
 								</div>}
 								<MiniFavorite />
+								<AuthBlock />
             </HeaderWrapper>
         )
     }

@@ -106,3 +106,33 @@ export const MiniFavoriteName = styled.div`
   text-transform: uppercase;
   text-align: center;
 `
+// AuthBlock
+export const LogWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+export const LogButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-color: ${props => props.color || '#2ecc71'};
+  border-style: solid;
+  background-color: ${props => props.backgroundColor || '#ffffff'};
+  border-radius: 17px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  &:hover {
+    color: ${props => props.color || '#ffffff'};
+    background: ${props => props.backgroundColor || '#2ecc71'};
+
+  }
+`
