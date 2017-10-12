@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import React from 'react'
 
 export const HeaderWrapper = styled.header`
     width: 100%;

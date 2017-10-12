@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import React from 'react'
 
 export const CategoryWrapper = styled.div`
     width: 100%;
@@ -21,7 +20,7 @@ export const Search = styled.input.attrs({
     max-width: 500px;
     padding: 5px 15px;
     margin-left: 7.5px;
-    margin-right: 7.5px;  
+    margin-right: 7.5px;
 `
 export const FilterIcon = styled.div`
     background-image: url(/images/category/filter.svg);
@@ -34,7 +33,7 @@ export const FilterIcon = styled.div`
     cursor: pointer;
     margin-left: 7.5px;
     margin-right: 7.5px;
-    transition-duration: 0.4s;    
+    transition-duration: 0.4s;
     &:hover {
     }
 `

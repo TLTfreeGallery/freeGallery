@@ -37,7 +37,6 @@ class MiniFavorite extends Component {
 
     render() {
 			const { Favorite, isShowMiniFavorite } = this.props
-      console.log(Favorite)
         return (
                 <CartIcon style={{ marginLeft: 'auto', marginRight: '5%' }}>
 									<CartIconCounter
