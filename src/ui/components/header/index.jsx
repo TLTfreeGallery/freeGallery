@@ -42,9 +42,14 @@ export const NavLink = styled.a`
 
 export const CartIcon = styled.div`
     position: relative;
-    width: 60px;
-    height: 60px;
-    background-image: url(/images/header/cart.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 24px;
+    background-image: url(/images/header/favorite.svg);
     background-repeat: no-repeat;
     cursor: pointer;
     &:hover {
@@ -53,35 +58,37 @@ export const CartIcon = styled.div`
 `
 
 export const CartIconCounter = styled.div`
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    // position: absolute;
+    // width: 30px;
+    // height: 30px;
+    // line-height: 30px;
     text-align: center;
     border-radius: 50%;
-    border: 2px solid #ffffff;
-    background: #2ecc71;
+    // border: 2px solid #ffffff;
+    // background: #2ecc71;
     color: ${props => props.background ? props.background : '#ffffff' };
     transition-duration: 0.4s;
-    &:hover {
-        border-style: solid;
-        background: #ffffff;
-        border-color: #2ecc71;
-        color: #2ecc71;
-    }
+    // &:hover {
+    //     border-style: solid;
+    //     background: #ffffff;
+    //     border-color: #2ecc71;
+    //     color: #2ecc71;
+    // }
 `
 
 export const MiniFavoriteList = styled.ul`
   position: absolute;
-  width: calc(150px - 20px);
+  max-width: 300px;
   min-height: 30px;
   left: -105px;
-  bottom: -80px;
+  top: 20px;
   display: flex;
   flex-direction: column;
-  border: 2px solid #2ecc71;
-  background: rgba(255, 255, 255, 1);
+  // border: 2px solid #2ecc71;
   z-index: 10;
+  border-radius: 15px;
+  padding: 5px 15px;
+
 `
 
 export const MiniFavoriteItems = styled.li`
@@ -92,6 +99,14 @@ export const MiniFavoriteItems = styled.li`
   align-items: center;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-size: 18px;
+  width: 400;
+  transition-duration: 0.4s;
+  background: rgba(70, 70, 70, 0.6);
+  &:hover {
+    transform: scale(1.3);
+    z-index: 11;
+  }
 `
 export const MiniFavoritePreview = styled.div`
   width: 60px;

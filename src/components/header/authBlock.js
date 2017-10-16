@@ -64,6 +64,7 @@ class AuthBlock extends Component {
       remember,
       agree
     } = this.props.sign
+
     const data = {
       firstName,
       lastName,

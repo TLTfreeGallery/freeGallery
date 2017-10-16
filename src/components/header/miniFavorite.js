@@ -38,23 +38,32 @@ class MiniFavorite extends Component {
     render() {
 			const { Favorite, isShowMiniFavorite } = this.props
         return (
-                <CartIcon style={{ marginLeft: 'auto', marginRight: '5%' }}>
-									<CartIconCounter
-                    style={{ top: 0, right: 0 }}
+                <CartIcon
                     onMouseEnter={() => this.showFavoriteList()}
-                    onMouseLeave={() => this.hideFavoriteList()}>
+                    onMouseLeave={() => this.hideFavoriteList()}
+                    style={{ marginLeft: 'auto', marginRight: '5%' }}
+                >
+									<CartIconCounter
+                    style={{ top: 0, right: 0 }}>
                     {Favorite.length}
                   </CartIconCounter>
                   {isShowMiniFavorite &&
                     <MiniFavoriteList>
                        {Favorite.map(img => (
                         <MiniFavoriteItems key={_.uniqueId()}>
-                          <MiniFavoritePreview img={img.src}>
+                          <MiniFavoritePreview
+                              img={img.src}
+                              style={{ marginRight: 15 }}
+                              >
                           </MiniFavoritePreview>
                           <MiniFavoriteName>
                             {img.name || 'default'}
                           </MiniFavoriteName>
                         </MiniFavoriteItems>))}
+                        {!Favorite.length &&
+                        <MiniFavoriteItems>
+                          Empty
+                        </MiniFavoriteItems>}
                     </MiniFavoriteList>
                   }
 								</CartIcon>

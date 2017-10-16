@@ -18,7 +18,7 @@ const mapDispachToProps = dispatch => bindActionCreators({
 class Header extends Component {
 
     render() {
-			const { isShow } = this.props
+			const { isLogin } = this.props
         return (
             <HeaderWrapper>
                 <NavMenu>
@@ -27,11 +27,8 @@ class Header extends Component {
                     <NavLink>aboute</NavLink>
                     <NavLink>ckmcz</NavLink>
                 </NavMenu>
-								{isShow &&
-								<div>
-								</div>}
 								<MiniFavorite />
-								<AuthBlock />
+								{!isLogin ? <AuthBlock /> :  <div>User</div>}
             </HeaderWrapper>
         )
     }

@@ -41,7 +41,7 @@ export const ModalBackDrop = styled.div`
     ${props => props.isShow === true ? defInModabackdroplLeft :
     props.isShow === false ? defOutModabackdroplLeft :
     'none'};
-  animation-duration: 0.7s;
+  animation-duration: 0.3s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
 `
@@ -58,7 +58,7 @@ export const ModalBody = styled.div`
   justify-content: center;
   align-items: flex-start;
   background: rgba(255,255,255, 0.85);
-  animation-duration: 1.1s;
+  animation-duration: 0.6s;
   will-change: contents;
   animation-name:
     ${props => props.isShow === true ? slideInModalLeft :
